@@ -1,0 +1,35 @@
+ {% load static %}
+ <div class="pa-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="pa-foot-box">
+                    <ul>
+                       {% for menu in menus  %}
+                            <li><a href="{{menu.link}}"> {{menu.name}}</a></li>
+                         {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="pa-foot-box">
+                    
+                    <ul>
+                        <li>
+                            <a href="javascript:;">درباره ما</a>
+                            <a href="javascript:;">{{setting.about_us|safe}} </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="pa-foot-box pa-foot-subscribe">
+                    <img src="{{setting.logo_image.url}}" alt="image" class="img-fluid"/>
+                    
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
